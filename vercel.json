@@ -1,17 +1,27 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/api/:path*",
-      "destination": "/api/:path*.js"
+      "src": "api/*.js",
+      "use": "@vercel/node"
     },
     {
-      "source": "/",
-      "destination": "/frontend/index.html"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/frontend/:path*"
+      "src": "frontend/**/*",
+      "use": "@vercel/static"
     }
   ],
-  "cleanUrls": true
+  "routes": [
+    {
+      "src": "^/api/(.*)$",
+      "dest": "/api/$1.js"
+    },
+    {
+      "src": "^/$",
+      "dest": "/frontend/index.html"
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/frontend/$1"
+    }
+  ]
 }
