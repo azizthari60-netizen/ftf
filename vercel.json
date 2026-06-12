@@ -1,8 +1,17 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/frontend/$1"
+      "source": "/api/:path*",
+      "destination": "/api/:path*.js"
+    },
+    {
+      "source": "/",
+      "destination": "/frontend/index.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/frontend/:path*"
     }
-  ]
+  ],
+  "cleanUrls": true
 }
