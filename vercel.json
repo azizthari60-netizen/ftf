@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm install",
-  "publicDir": "frontend",
+  "outputDirectory": "frontend",
   "env": {
     "NODE_ENV": "production"
   },
