@@ -1,0 +1,11 @@
+{
+  "name": "Falah-e-Thar Foundation",
+  "description": "Configuration placeholder for deployment (e.g., Hostinger, PM2 or other services).",
+  "entry": "backend/server.js",
+  "env": {
+    "PORT": 5000,
+    "NODE_ENV": "production"
+  }
+}
+
+
